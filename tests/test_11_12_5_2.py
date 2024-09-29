@@ -4,7 +4,7 @@ from functions import func
 
 @pytest.fixture
 def input_json():
-    return  '''[
+    return '''[
     {
         "date": "2021-05-01",
         "amount": 1000,
@@ -30,9 +30,11 @@ def input_json():
         "description": "Gift"
     }
     ]'''
+
+
 @pytest.fixture
 def output_json():
-    return  '''
+    return '''
     [
         {
             "date": "2021-05-01",
@@ -51,6 +53,6 @@ def output_json():
 
 
 def test_func(input_json: str, output_json: str) -> None:
-    result = func(input_json)
-    assert result  == output_json
+    result = func(input_json, "USD")
+    assert result == output_json
     pass
