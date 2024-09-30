@@ -38,4 +38,6 @@ x = '''[
     ]'''
 
 q = func(x, 'USD')
+print('----')
 print(q)
+print('----')
